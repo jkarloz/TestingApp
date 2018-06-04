@@ -13,7 +13,7 @@ import org.junit.runners.Parameterized.Parameters;
 @RunWith(Parameterized.class)
 public class LogAnalyzerTest {
 	
-	@Parameters
+	@Parameters(name = "{index}: logFileName={0} expected result: {1}")
 	public static Collection<Object[]> data() {
 		return Arrays.asList(new Object[][] {
 			{"mylog.slf", true}, {"mylog.SLF", true}, {"mylog.log", false}
