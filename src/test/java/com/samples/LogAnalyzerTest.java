@@ -10,6 +10,14 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
+/**
+ * When using Parameters all the tests in the class will be executed as many times as set of parameters we have defined.
+ * For example, in this class we have 3 sets of parameters defined,
+ * so, "isValidLogFileVariousExtensionsEvaluateThem" and "anotherTest" will be execute 3 times each one.
+ * @author jcalderon
+ *
+ */
+
 @RunWith(Parameterized.class)
 public class LogAnalyzerTest {
 	
@@ -32,6 +40,12 @@ public class LogAnalyzerTest {
 	public void isValidLogFileVariousExtensionsEvaluateThem() {
 		LogAnalyzer analyzer = new LogAnalyzer();
 		assertEquals(expectedValue,  analyzer.isValidLogFileName(fileName));
-	}
+	}	
 	
+	@Test
+	public void anotherTest() {
+		LogAnalyzer analyzer = new LogAnalyzer();
+		Boolean result = analyzer.isValidLogFileName("mylog.slf");
+		assertTrue(result);
+	}
 }
