@@ -6,9 +6,12 @@ import java.util.Arrays;
 import java.util.Collection;
 
 import org.junit.Test;
+import org.junit.experimental.categories.Categories.IncludeCategory;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
+
+import com.samples.categories.SlowTests;
 
 /**
  * When using Parameters all the tests in the class will be executed as many times as set of parameters we have defined.
